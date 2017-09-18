@@ -1,0 +1,22 @@
+{
+	"name": "inlm/dibi-transactions",
+	"type": "library",
+	"description": "Nested transactions for Dibi.",
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Jan Pecha",
+			"homepage": "https://www.janpecha.cz/"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0",
+		"dibi/dibi": ">=3.0.0"
+	},
+	"autoload": {
+		"classmap": ["src/"]
+	},
+	"require-dev": {
+		"nette/tester": "^1.7"
+	}
+}
