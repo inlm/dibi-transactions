@@ -119,6 +119,10 @@
 				call_user_func($callable);
 				$this->commit();
 
+			} catch (\Throwable $e) {
+				$this->rollback();
+				throw $e;
+
 			} catch (\Exception $e) {
 				$this->rollback();
 				throw $e;
