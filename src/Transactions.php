@@ -5,8 +5,8 @@
 
 	class Transactions
 	{
-		/** @var callback[] */
-		public $onUnresolved;
+		/** @var callable[] */
+		public $onUnresolved = [];
 
 		/** @var \Dibi\Connection */
 		protected $connection;
@@ -108,10 +108,9 @@
 
 
 		/**
-		 * @param  callable
 		 * @return mixed
 		 */
-		public function transactional($callable)
+		public function transactional(callable $callable)
 		{
 			$this->begin();
 
