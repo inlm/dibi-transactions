@@ -132,6 +132,7 @@
 
 		/**
 		 * @internal
+		 * @return void
 		 */
 		public function reportUnresolvedTransaction(UnresolvedTransactionException $exception)
 		{
@@ -150,10 +151,6 @@
 		 */
 		protected function supportsSavePoints(\Dibi\Driver $driver)
 		{
-			if ($driver instanceof \Dibi\Drivers\MySqlDriver) {
-				return TRUE;
-			}
-
 			if ($driver instanceof \Dibi\Drivers\MySqliDriver) {
 				return TRUE;
 			}
@@ -163,6 +160,10 @@
 			}
 
 			if ($driver instanceof \Dibi\Drivers\Sqlite3Driver) {
+				return TRUE;
+			}
+
+			if ($driver instanceof \Dibi\Drivers\MySqlDriver) {
 				return TRUE;
 			}
 

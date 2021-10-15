@@ -1,0 +1,16 @@
+parameters:
+	level: max
+
+	paths:
+		- ../src
+
+	ignoreErrors:
+		# remove after upgrade to PHP 7+
+		-
+			message: '#Dead catch - Exception is already caught by Throwable above\.#'
+			path: ../src/Transactions.php
+
+		# remove after upgrade to Dibi 4.x / PHP 7+
+		-
+			message: '#Class Dibi\\Drivers\\MySqlDriver not found\.#'
+			path: ../src/Transactions.php

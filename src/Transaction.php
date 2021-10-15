@@ -22,6 +22,9 @@
 		}
 
 
+		/**
+		 * @return void
+		 */
 		public function commit()
 		{
 			if ($this->resolved) {
@@ -33,6 +36,9 @@
 		}
 
 
+		/**
+		 * @return void
+		 */
 		public function rollback()
 		{
 			if ($this->resolved) {
