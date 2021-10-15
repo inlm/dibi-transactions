@@ -15,7 +15,7 @@ Nested transactions for Dibi.
 composer require inlm/dibi-transactions
 ```
 
-Inlm\Dibi-transactions requires PHP 5.4.0 or later and [Dibi](https://dibiphp.com).
+Inlm\Dibi-transactions requires PHP 5.6.0 or later and [Dibi](https://dibiphp.com).
 
 
 ## Usage
@@ -53,7 +53,7 @@ try {
 Object `Transaction` throws error if you forget to call `commit()` or `rollback()`. It can be connected with [Tracy](https://tracy.nette.org/):
 
 ``` php
-$transactions->onUnresolved[] = array('Inlm\DibiTransactions\Bridges\Tracy', 'logUnresolved');
+$transactions->onUnresolved[] = array(Inlm\DibiTransactions\Bridges\Tracy::class, 'logUnresolved');
 ```
 
 
