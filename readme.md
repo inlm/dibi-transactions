@@ -28,9 +28,10 @@ $transactions = new Inlm\DibiTransactions\Transactions($connection);
 ### `transactional()`
 
 ``` php
-$transactions->transactional(function () use ($connection) {
+$value = $transactions->transactional(function () use ($connection) {
 	$connection->query('...');
 	$connection->query('...');
+	return $value;
 });
 ```
 

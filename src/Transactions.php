@@ -109,15 +109,16 @@
 
 		/**
 		 * @param  callable
-		 * @return void
+		 * @return mixed
 		 */
 		public function transactional($callable)
 		{
 			$this->begin();
 
 			try {
-				call_user_func($callable);
+				$value = call_user_func($callable);
 				$this->commit();
+				return $value;
 
 			} catch (\Throwable $e) {
 				$this->rollback();
