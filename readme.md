@@ -1,6 +1,8 @@
 
 # Inlm\DibiTransactions
 
+[![Tests Status](https://github.com/inlm/dibi-transactions/workflows/Tests/badge.svg)](https://github.com/inlm/dibi-transactions/actions)
+
 Nested transactions for Dibi.
 
 <a href="https://www.paypal.me/janpecha/5eur"><img src="https://buymecoffee.intm.org/img/button-paypal-white.png" alt="Buy me a coffee" height="35"></a>
