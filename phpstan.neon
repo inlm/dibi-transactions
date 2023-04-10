@@ -3,6 +3,7 @@ parameters:
 
 	paths:
 		- src
+		- tests
 
 	ignoreErrors:
 		# remove after upgrade to PHP 7+

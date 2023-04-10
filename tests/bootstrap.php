@@ -10,6 +10,10 @@ define('TEMP_DIR', __DIR__ . '/tmp/' . getmypid());
 Tester\Helpers::purge(TEMP_DIR);
 
 
+/**
+ * @param  string $description
+ * @return void
+ */
 function test($description, callable $cb)
 {
 	$cb();
@@ -40,6 +44,9 @@ class Tests
 	}
 
 
+	/**
+	 * @return void
+	 */
 	public static function resetDb(Dibi\Connection $connection)
 	{
 		Dibi\Helpers::loadFromFile($connection, __DIR__ . '/Transactions/books.sql');
@@ -59,6 +66,9 @@ class Books
 	}
 
 
+	/**
+	 * @return void
+	 */
 	public function resetDb()
 	{
 		Dibi\Helpers::loadFromFile($this->connection, __DIR__ . '/Transactions/books.sql');
@@ -70,12 +80,18 @@ class Books
 	 */
 	public function count()
 	{
-		return (int) $this->connection->query('SELECT COUNT(*) FROM [book]')->fetchSingle();
+		$value = $this->connection->query('SELECT COUNT(*) FROM [book]')->fetchSingle();
+
+		if (!is_scalar($value)) {
+			throw new \RuntimeException("Value is not scalar");
+		}
+
+		return (int) $value;
 	}
 
 
 	/**
-	 * @param  string $title
+	 * @param  string $name
 	 * @return void
 	 */
 	public function insert($name)
