@@ -1,7 +1,9 @@
-
 # Inlm\DibiTransactions
 
-[![Tests Status](https://github.com/inlm/dibi-transactions/workflows/Tests/badge.svg)](https://github.com/inlm/dibi-transactions/actions)
+[![Build Status](https://github.com/inlm/dibi-transactions/workflows/Build/badge.svg)](https://github.com/inlm/dibi-transactions/actions)
+[![Downloads this Month](https://img.shields.io/packagist/dm/inlm/dibi-transactions.svg)](https://packagist.org/packages/inlm/dibi-transactions)
+[![Latest Stable Version](https://poser.pugx.org/inlm/dibi-transactions/v/stable)](https://github.com/inlm/dibi-transactions/releases)
+[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/inlm/dibi-transactions/blob/master/license.md)
 
 Nested transactions for Dibi.
 
