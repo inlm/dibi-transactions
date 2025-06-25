@@ -18,7 +18,7 @@ Nested transactions for Dibi.
 composer require inlm/dibi-transactions
 ```
 
-Inlm\Dibi-transactions requires PHP 5.6.0 or later and [Dibi](https://dibiphp.com).
+Inlm\Dibi-transactions requires PHP 8.0 or later and [Dibi](https://dibiphp.com).
 
 
 ## Usage
