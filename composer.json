@@ -20,7 +20,7 @@
 		"classmap": ["src/"]
 	},
 	"require-dev": {
-		"nette/tester": "^2.0",
+		"nette/tester": "^2.5",
 		"nette/utils": "^2.4 || ^3.0 || ^4.0",
 		"tracy/tracy": "^2.4"
 	}
